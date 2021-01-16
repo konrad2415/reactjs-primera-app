@@ -1,17 +1,36 @@
-import './App.css';
+import React ,{ useState } from 'react';
+import "./style/App.css";
 
-function App() {
-    return ( <div className = "App" >
-        <header className = "App-header" >
-        
-        <p>
-        Edit <code> src / App.js </code> and save to reload. </p><a className = "App-link"    href = "https://reactjs.org"
-        target = "_blank"
-        rel = "noopener noreferrer" >
-        Learn React </a>
-        </header> 
-      </div>
+import Menu from './menu'
+import List from './list'
+
+
+import star  from './img/star.png'
+
+ function App(){
+
+   // Array with the items at initial state 
+   const initialState='{ "books":['+
+   '{id:0, rating: 4, title: "Harry Potter y el Cadis de Fuego" , image: "libro01.jpg"},'+
+   '{id:0, rating: 3, title: "The Shining" , image: "libro02.jpg"},'+
+   '{id:0, rating: 5, title: "El Código Da Vinci" , image: "libro03.jpg"},'+
+   '{id:0, rating: 5, title: "El Principito" , image: "libro04.jpg"},'+
+   '{id:0, rating: 5, title: "Sobrenatural" , image: "libro05.jpg"}]}';
+   
+   
+  
+
+
+
+   const [items,itemsState]= useState(initialState)
+
+    return(
+     <div className="App">
+        <Menu title="Amase" />
+        <List/>
+     </div>
+
     );
-}
+ }
 
-export default App;
+ export default App;
