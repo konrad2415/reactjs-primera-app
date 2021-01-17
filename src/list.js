@@ -1,6 +1,12 @@
 const List=(props)=>{
     return(
-        <h1>123</h1>
+        <div className="list">
+             {
+                 props.items.map(item=><div> {item.title}</div>
+                  
+                 )
+             }
+        </div>
     );
 }
 

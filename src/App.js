@@ -1,10 +1,7 @@
 import React ,{ useState } from 'react';
 import "./style/App.css";
-
 import Menu from './menu'
 import List from './list'
-
-
 import star  from './img/star.png'
 
  function App(){
@@ -18,18 +15,15 @@ import star  from './img/star.png'
    '{id:0, rating: 5, title: "Sobrenatural" , image: "libro05.jpg"}]}';
    
    
-  
-
-
-
-   const [items,itemsState]= useState(initialState)
-
+   const [state,setState]= useState(initialState);
+   const { books } = state;
+   <List items={books} />
+   }
     return(
      <div className="App">
         <Menu title="Amase" />
-        <List/>
+        <List items={books} />
      </div>
-
     );
  }
 
