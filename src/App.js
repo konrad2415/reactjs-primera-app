@@ -2,14 +2,15 @@ import React from 'react';
 
 
 const  App=()=> {
+  // Create a variable in local scope with let and JS 
+  let txt = "Hellow world, I'm a live";
+
+   // Using React JSX hability 
+   let txtHTML= <h1>Hello, here is a text inside HTML tags</h1>;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+       {txt}<br/>
+       {txtHTML}
     </div>
   );
 }
