@@ -10,7 +10,7 @@ const  App=()=> {
   return (
     <div className="App">
        {txt}<br/>
-       {txtHTML}
+       {txgitHTML}
     </div>
   );
 }
